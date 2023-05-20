@@ -1,0 +1,110 @@
+::-webkit-scrollbar{
+    background: #2D2E49;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #1D1D1F;
+}
+
+@font-face{
+	font-family: sans-serif;
+	src: url("lemon_milk/lemonmilk.otf");
+	src: url ("garet/Garet-Book.ttf");
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	background-color: #1D1D20;
+	background-color: rgba(0,0,0,0);
+}
+body, html{
+  	background-image: url("background.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: -1;
+}
+.text h1{
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	font-family: 'LEMON MILK', sans-serif;
+	padding-left: 100px;
+	float: left;
+	margin-top: 50px;
+	padding-left: 350px;
+}
+.logo{
+	height: 120px;
+	width: 125px;
+}
+
+.sidenav {
+	height: 100%;
+	width: 220px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #242D48;
+	overflow-x: hidden;
+	padding-top: 20px;
+  	font-family: 'LEMON MILK', sans-serif;
+}
+.sidenav a{
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	margin: 10px;
+}
+
+.sidenav a:hover {
+	color: #BDC7EF;
+}
+.copyright{
+	font-size: 12px; 
+	display: block;
+	margin: 10px;
+	padding: 200px 10px 10px 10px;
+	color: white;
+}
+body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: white;
+}
+.question{
+	padding: 100px 100px 0px 350px;
+	font-weight: 600;
+}
+.answers {
+	padding-top: 20px;
+	padding-left: 350px;
+	margin: 20px;
+}
+.answers label{
+  display: block;
+  
+}
+#submit{
+	margin: 20px 10px 10px 350px;
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: black;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	padding: 20px;
+	font-family: 'Garet', sans-serif;
+}
+#submit:hover{
+	background-color: white;
+	color: #2D2E49;
+}

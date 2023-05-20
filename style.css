@@ -1,0 +1,82 @@
+::-webkit-scrollbar{
+    background: #2D2E49;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #1D1D1F;
+}
+
+@font-face{
+	font-family: sans-serif;
+	src: url("lemon_milk/lemonmilk.otf");
+	src: url ("garet/Garet-Book.ttf");
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	color: white;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+
+}
+.front{
+	background-color: #1D1D1F;
+	width:100%;
+	height:100vh;
+	position: relative;
+	padding: 0 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.background{
+	position: fixed;
+	width: 100%;
+	height: 100%;	
+}
+
+body{
+	margin: 0;
+}
+
+.text{	
+	z-index: 1;
+	font-family: 'LEMON MILK', sans-serif;
+}
+
+.text h1{
+	font-size: 120px;
+	color: #BDC7EF;
+	font-weight: 600;
+	-webkit-text-stroke: 1px white;
+	text-align: center;
+}
+.text h2{
+	font-size: 50px;
+	color: #fff;
+	font-weight: 100;
+	-webkit-text-stroke: 1px #BDC7EF;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.main{
+	background-color: black;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	font-family: 'LEMON MILK', sans-serif;
+}
+.main ul a{
+	float: left;
+	display: inline-block;
+	margin: 26px;
+	font-size: 25px;
+	color: #BDC7EF;
+}
+.main a:hover{	
+	color: white;
+	-webkit-text-stroke: #BDC7EF;
+}

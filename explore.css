@@ -1,0 +1,192 @@
+::-webkit-scrollbar{
+    background: #2D2E49;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #1D1D1F;
+}
+
+@font-face{
+	font-family: sans-serif;
+	src: url("lemon_milk/lemonmilk.otf");
+	src: url ("garet/Garet-Book.ttf");
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	background-color: #1D1D20;
+	background-color: rgba(0,0,0,0);
+}
+body, html{
+  	background-image: url("background.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: -1;
+}
+
+.logo{
+	height: 120px;
+	width: 125px;
+}
+
+.sidenav {
+	height: 100%;
+	width: 220px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #242D48;
+	overflow-x: hidden;
+	padding-top: 20px;
+  	font-family: 'LEMON MILK', sans-serif;
+}
+.sidenav a{
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	margin: 10px;
+}
+
+.sidenav a:hover {
+	color: #BDC7EF;
+}
+.copyright{
+	font-size: 12px; 
+	display: block;
+	margin: 10px;
+	padding: 200px 10px 10px 10px;
+	color: white;
+}
+.text{
+  margin-left: 160px; 
+  font-size: 28px; 
+  padding: 0px 10px;
+  z-index: 1;
+}
+.text h1{
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	font-family: 'LEMON MILK', sans-serif;
+	padding-left: 100px;
+	float: left;
+	margin-top: 50px;
+}
+.text p{
+	box-sizing: border-box;
+	padding-left: 70px;
+	float: left;
+	font-family: 'Garet', sans-serif;
+	text-align: justify;
+	font-size: 20px;
+	color: white;
+	margin: 50px 550px 50px 50px;
+	z-index: -1;
+}
+.img1{
+	float: right;
+	width: 550px;
+	height: 350px;
+	margin-top: -380px;
+	padding: 20px;
+}
+.img2{
+	float: right;
+	width: 550px;
+	height: 350px;
+	margin-top: -380px;
+	padding: 20px;
+}
+.img3{
+	float: right;
+	width: 550px;
+	height: 490px;
+	margin-top: -530px;
+	padding: 20px;
+}
+.img4{
+	float: right;
+	width: 550px;
+	height: 490px;
+	margin-top: -500px;
+	padding: 20px;
+}
+.text h2{
+	font-size: 50px;
+	color: #BDC7EF;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 100px;
+	float: left;
+	margin-top: 50px; 
+}
+.text h3{
+	box-sizing: border-box;
+	padding-left: 70px;
+	float: left;
+	font-family: 'Garet', sans-serif;
+	text-align: justify;
+	font-size: 20px;
+	color: white;
+	margin: 50px 100px 50px 50px;
+	z-index: -1;
+}
+.text h5{
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	font-family: 'LEMON MILK', sans-serif;
+	padding-left: 100px;
+	float: left;
+	margin-top: 60px;
+	z-index: 1;
+}
+.button {
+	font-family: 'Garet', sans-serif;
+	background-color: black;
+	text-decoration: none;
+	border-radius: 90px;
+	border-style: solid;
+	border-color: white;
+	text-align: center;
+	font-size: 28px;
+	width: 260px;
+	height: 50px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 55px;
+	float: right;
+
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+	color: white;
+}
+
+.button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 2;
+	right: 0;
+}

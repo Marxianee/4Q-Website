@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content width="device-width", initial-scale=1.0">
+		<link rel="stylesheet" href="questions.css">
+		<title> Cosmo-Complexities </title>
+		<link rel="icon" type = "media/png" href = "media/logo.png">
+	</head>
+<body>
+	<nav>
+	<div class = "sidenav">
+		<a href="Home.html">
+			<img src="media/logo.png" class="logo">
+		</a>
+		<a href="Home.html">HOME</a>
+		<a href="explore.html">EXPLORE</a>
+		<a href="questions.html"> QUESTIONS</a>
+		<a href="references.html">REFERENCES</a>
+		<a href="about.html">ABOUT</a></li>
+		<div class = "copyright">
+			&copy Mariane E. Hangad <br> ~ 9 - Calcium </a>
+		</div>
+	</div>
+	</nav>
+	<div class="text">
+	<h1> Testing your knowledge! </h1>
+	</div>
+<br><br><br>
+<script type="text/javascript" nonce="998ef340afdb424086e1bbbfb1b" src="//local.adguard.org?ts=1684580700099&amp;type=content-script&amp;dmn=cdn.fbsbx.com&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="998ef340afdb424086e1bbbfb1b" src="//local.adguard.org?ts=1684580700099&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="stylesheet" href="questions.css">
+		
+		<div class="text">
+			<div id="quiz"></div>
+			<button id="submit">Get Results</button>
+			<div id="results"></div>
+		</div>
+</center>
+
+	</body>
+
+<script>
+		var myQuestions = [
+			{
+			question: "It is a branch of astronomy involving the science of the universe's origin",
+			answers: {
+			  a: 'Biology',
+			  b: 'Astrology',
+			  c: 'Cosmology'
+			},
+			correctAnswer: 'c'
+		  },
+		  {
+			question: " These are powerful stellar explosions that release enormous amounts of energy. They play a crucial role in the distribution of elements, the life cycle of stars, and our understanding of cosmic expansion.",
+			answers: {
+			  a: 'Supernovae',
+			  b: 'Black Holes',
+			  c: 'Galaxies'
+			},
+			correctAnswer: 'a'
+		  },
+		  {
+			question: "The prevailing explanation for the origin of the universe. It proposes that the universe began from a tremendously hot and dense singularity, which rapidly expanded and stretched over the course of 13.7 billion years to form the expanding cosmos we observe today.",
+			answers: {
+			  a: 'Cosmic Microwave Background',
+			  b: 'The Big Bang',
+			  c: 'The Inflation Theory'
+			},
+			correctAnswer: 'b'
+		  }
+		];
+
+		var quizContainer = document.getElementById('quiz');
+		var resultsContainer = document.getElementById('results');
+		var submitButton = document.getElementById('submit');
+
+		generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+		function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+		  function showQuestions(questions, quizContainer){
+			var output = [];
+			var answers;
+
+			for(var i=0; i<questions.length; i++){
+			  
+			  answers = [];
+
+			  for(letter in questions[i].answers){
+
+				answers.push(
+				  '<label>'
+					+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+					+ letter + ': '
+					+ questions[i].answers[letter]
+				  + '</label>'
+				);
+			  }
+
+			  output.push(
+				'<div class="question">' + questions[i].question + '</div>'
+				+ '<div class="answers">' + answers.join('') + '</div>'
+			  );
+			}
+
+			quizContainer.innerHTML = output.join('');
+		  }
+
+
+		  function showResults(questions, quizContainer, resultsContainer){
+			
+			var answerContainers = quizContainer.querySelectorAll('.answers');
+			
+			var userAnswer = '';
+			var numCorrect = 0;
+			
+			for(var i=0; i<questions.length; i++){
+
+			  userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+			  
+			  if(userAnswer===questions[i].correctAnswer){
+				numCorrect++;
+				
+				answerContainers[i].style.color = 'lightgreen';
+			  }
+			  else{
+				answerContainers[i].style.color = 'red';
+			  }
+			}
+
+			resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+		  }
+
+		  showQuestions(questions, quizContainer);
+		  
+		  submitButton.onclick = function(){
+			showResults(questions, quizContainer, resultsContainer);
+		  }
+
+		}
+	</script>
+</html>
+</script>
+<html>
